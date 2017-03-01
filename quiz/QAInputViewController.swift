@@ -17,14 +17,13 @@ class QAInputViewController: UIViewController, UITextFieldDelegate {
         if questionTextField.hasText && answerTextField.hasText {
             questions.append(questionTextField.text!)
             answers.append(answerTextField.text!)
-            questionTextField.text = " "
-            answerTextField.text = " "
+            questionTextField.text = ""
+            answerTextField.text = ""
+            questionTextField.endEditing(true)
+            answerTextField.endEditing(true)
         }
     }
     
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        questionTextField.resignFirstResponder()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
