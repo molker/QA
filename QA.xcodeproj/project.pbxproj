@@ -13,6 +13,7 @@
 		51929F2F1E16EEBD0049D0D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51929F2E1E16EEBD0049D0D2 /* Assets.xcassets */; };
 		51929F321E16EEBD0049D0D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51929F301E16EEBD0049D0D2 /* LaunchScreen.storyboard */; };
 		864B61991E6689BC00374964 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B61981E6689BC00374964 /* WelcomeViewController.swift */; };
+		864B619B1E6693A400374964 /* QAInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B619A1E6693A400374964 /* QAInputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		51929F311E16EEBD0049D0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51929F331E16EEBD0049D0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864B61981E6689BC00374964 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		864B619A1E6693A400374964 /* QAInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAInputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				51929F291E16EEBD0049D0D2 /* ViewController.swift */,
 				864B61981E6689BC00374964 /* WelcomeViewController.swift */,
 				51929F2B1E16EEBD0049D0D2 /* Main.storyboard */,
+				864B619A1E6693A400374964 /* QAInputViewController.swift */,
 				51929F2E1E16EEBD0049D0D2 /* Assets.xcassets */,
 				51929F301E16EEBD0049D0D2 /* LaunchScreen.storyboard */,
 				51929F331E16EEBD0049D0D2 /* Info.plist */,
@@ -143,6 +146,7 @@
 				864B61991E6689BC00374964 /* WelcomeViewController.swift in Sources */,
 				51929F2A1E16EEBD0049D0D2 /* ViewController.swift in Sources */,
 				51929F281E16EEBD0049D0D2 /* AppDelegate.swift in Sources */,
+				864B619B1E6693A400374964 /* QAInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

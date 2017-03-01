@@ -60,6 +60,7 @@
                             <constraint firstItem="X2j-iw-pGG" firstAttribute="top" secondItem="020-Ts-mmh" secondAttribute="bottom" constant="8" id="mri-t5-mdd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" id="xXm-Gy-afd"/>
                     <connections>
                         <outlet property="answerLabel" destination="F2M-Pa-fm2" id="FgM-KG-mpB"/>
                         <outlet property="questionLabel" destination="020-Ts-mmh" id="gII-ER-AIU"/>
@@ -67,7 +68,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="72"/>
+            <point key="canvasLocation" x="-775" y="-955"/>
+        </scene>
+        <!--Input-->
+        <scene sceneID="cW8-xO-s9p">
+            <objects>
+                <viewController id="Aqc-08-xpT" customClass="QAInputViewController" customModule="QA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QeP-73-NH1"/>
+                        <viewControllerLayoutGuide type="bottom" id="H86-AR-IgF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5dn-Ap-QyM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viE-Gp-S4b">
+                                <rect key="frame" x="159" y="263" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-y7-w4O">
+                                <rect key="frame" x="139" y="157" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-nN-N05">
+                                <rect key="frame" x="139" y="333" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qa-6k-qye">
+                                <rect key="frame" x="153" y="89" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Input" id="nIn-aw-2OU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntt-1o-rww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1546.4000000000001" y="-281.10944527736132"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0mh-eE-POW">
+            <objects>
+                <tabBarController id="GTs-zT-oIR" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dzd-te-Xgu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dgq-Lj-pf5"/>
+                        <segue destination="Aqc-08-xpT" kind="relationship" relationship="viewControllers" id="a3R-9Z-63v"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLn-wr-Z6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1545" y="-954"/>
         </scene>
         <!--WelcomeViewController-->
         <scene sceneID="c9Z-9f-uG5">
@@ -101,12 +169,12 @@
                     </view>
                     <connections>
                         <outlet property="takeQuiz" destination="LWF-Dk-Sew" id="IBZ-5r-470"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="nextView" id="ocT-Aj-fD2"/>
+                        <segue destination="GTs-zT-oIR" kind="presentation" identifier="nextView" id="8IZ-w1-BiX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vb-nN-oWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-757.60000000000002" y="71.514242878560722"/>
+            <point key="canvasLocation" x="-2271" y="-944"/>
         </scene>
     </scenes>
 </document>
