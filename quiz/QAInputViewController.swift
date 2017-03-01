@@ -19,6 +19,7 @@ class QAInputViewController: UIViewController, UITextFieldDelegate {
     //text fields for user input
     @IBOutlet var questionTextField: UITextField!
     @IBOutlet var answerTextField: UITextField!
+    @IBOutlet var InsertQA: UIButton!
     
     //function for allowing the user to submit input if and only if
     //both input fields are filled
@@ -34,11 +35,32 @@ class QAInputViewController: UIViewController, UITextFieldDelegate {
             //deselects the text fields when submit
             questionTextField.endEditing(true)
             answerTextField.endEditing(true)
+            questionTextField.backgroundColor = UIColor.green
+            answerTextField.backgroundColor = UIColor.green
+        } else {//an incorrect submission will make it red
+            questionTextField.backgroundColor = UIColor.red
+            answerTextField.backgroundColor = UIColor.red
         }
+    }
+    
+    //if the user clicks off the text field, they stop editing it
+    //also changes the background color of the text field to white
+    //in case it is still green or red from submitting
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        if questionTextField.isEditing {
+            questionTextField.resignFirstResponder()
+        }
+        questionTextField.backgroundColor = UIColor.white
+        if answerTextField.isEditing {
+            answerTextField.resignFirstResponder()
+        }
+        answerTextField.backgroundColor = UIColor.white
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.lightGray
+        InsertQA.layer.cornerRadius = 5
     }
 }
