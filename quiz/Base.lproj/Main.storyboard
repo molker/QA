@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,7 +61,7 @@
                             <constraint firstItem="X2j-iw-pGG" firstAttribute="top" secondItem="020-Ts-mmh" secondAttribute="bottom" constant="8" id="mri-t5-mdd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" id="xXm-Gy-afd"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="QuestionIcon" id="xXm-Gy-afd"/>
                     <connections>
                         <outlet property="answerLabel" destination="F2M-Pa-fm2" id="FgM-KG-mpB"/>
                         <outlet property="questionLabel" destination="020-Ts-mmh" id="gII-ER-AIU"/>
@@ -82,52 +83,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qa-6k-qye">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qa-6k-qye">
                                 <rect key="frame" x="153" y="89" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viE-Gp-S4b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viE-Gp-S4b">
                                 <rect key="frame" x="159" y="263" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-y7-w4O" userLabel="Question Input">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-y7-w4O" userLabel="Question Input">
                                 <rect key="frame" x="116" y="159" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="M8F-XW-igJ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE4-YZ-gOJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE4-YZ-gOJ">
                                 <rect key="frame" x="155" y="431" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Insert QA"/>
                                 <connections>
                                     <action selector="submitInput:" destination="Aqc-08-xpT" eventType="touchUpInside" id="gFQ-2m-hNS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Answer to Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-nN-N05">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Answer to Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-nN-N05">
                                 <rect key="frame" x="97" y="333" width="181" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tZ8-nN-N05" firstAttribute="top" secondItem="viE-Gp-S4b" secondAttribute="bottom" constant="49" id="1E8-7f-kSJ"/>
+                            <constraint firstItem="pbO-y7-w4O" firstAttribute="centerX" secondItem="viE-Gp-S4b" secondAttribute="centerX" id="4ge-bI-zLL"/>
+                            <constraint firstItem="tZ8-nN-N05" firstAttribute="centerX" secondItem="SE4-YZ-gOJ" secondAttribute="centerX" id="4iC-32-n9T"/>
+                            <constraint firstItem="5Qa-6k-qye" firstAttribute="centerX" secondItem="5dn-Ap-QyM" secondAttribute="centerX" id="7yV-uQ-cAj"/>
+                            <constraint firstItem="pbO-y7-w4O" firstAttribute="centerX" secondItem="5Qa-6k-qye" secondAttribute="centerX" id="En9-fl-XRv"/>
+                            <constraint firstItem="SE4-YZ-gOJ" firstAttribute="top" secondItem="tZ8-nN-N05" secondAttribute="bottom" constant="68" id="Oqs-ud-ROC"/>
+                            <constraint firstItem="viE-Gp-S4b" firstAttribute="centerX" secondItem="tZ8-nN-N05" secondAttribute="centerX" id="cDh-Ot-P9c"/>
+                            <constraint firstItem="viE-Gp-S4b" firstAttribute="top" secondItem="pbO-y7-w4O" secondAttribute="bottom" constant="74" id="e49-eq-8Gq"/>
+                            <constraint firstItem="pbO-y7-w4O" firstAttribute="top" secondItem="5Qa-6k-qye" secondAttribute="bottom" constant="49" id="gFI-8D-VJI"/>
+                            <constraint firstItem="tZ8-nN-N05" firstAttribute="leading" secondItem="5dn-Ap-QyM" secondAttribute="leadingMargin" constant="81" id="kNi-NC-scy"/>
+                            <constraint firstItem="5Qa-6k-qye" firstAttribute="top" secondItem="QeP-73-NH1" secondAttribute="bottom" constant="69" id="yOV-uD-NaG"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vaj-Vt-IvR" appends="YES" id="7D7-58-bwl"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Input" id="nIn-aw-2OU"/>
+                    <tabBarItem key="tabBarItem" title="Input" image="InputIcon" id="nIn-aw-2OU"/>
                     <connections>
                         <outlet property="answerTextField" destination="tZ8-nN-N05" id="cuB-rC-3GF"/>
                         <outlet property="questionTextField" destination="pbO-y7-w4O" id="M8P-Nf-dga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntt-1o-rww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vaj-Vt-IvR"/>
             </objects>
             <point key="canvasLocation" x="-1546.4000000000001" y="-281.10944527736132"/>
         </scene>
@@ -161,23 +178,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Quiz!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-Tu-Ei7">
-                                <rect key="frame" x="62" y="131" width="251" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-Dk-Sew">
-                                <rect key="frame" x="140" y="318" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take the Quiz"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-Dk-Sew">
+                                <rect key="frame" x="140" y="487" width="94" height="30"/>
+                                <state key="normal" title="Take the Quiz">
+                                    <color key="titleColor" red="0.65410698784722221" green="0.058729383680555552" blue="0.11992730034722222" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goToQuiz:" destination="Rgf-0H-gTS" eventType="touchUpInside" id="PYR-71-XST"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Quiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-Tu-Ei7">
+                                <rect key="frame" x="65" y="131" width="245" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="CI2-nD-vad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.687744140625" green="0.058729383680555552" blue="0.11992730034722222" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ShH-Tu-Ei7" firstAttribute="leading" secondItem="F1e-4a-K7t" secondAttribute="leadingMargin" constant="49" id="bnY-dX-X1Z"/>
+                            <constraint firstItem="ShH-Tu-Ei7" firstAttribute="centerX" secondItem="LWF-Dk-Sew" secondAttribute="centerX" id="mfw-e5-cbU"/>
+                            <constraint firstItem="ShH-Tu-Ei7" firstAttribute="top" secondItem="plv-DH-wtu" secondAttribute="bottom" constant="111" id="sIX-kN-ggh"/>
+                            <constraint firstItem="l7Z-Ji-6Jd" firstAttribute="top" secondItem="LWF-Dk-Sew" secondAttribute="bottom" constant="150" id="tlv-6c-LJJ"/>
+                            <constraint firstItem="LWF-Dk-Sew" firstAttribute="centerX" secondItem="F1e-4a-K7t" secondAttribute="centerX" id="z4g-fc-oYN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="takeQuiz" destination="LWF-Dk-Sew" id="IBZ-5r-470"/>
@@ -186,7 +213,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vb-nN-oWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2271" y="-944"/>
+            <point key="canvasLocation" x="-2271.1999999999998" y="-944.07796101949032"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="InputIcon" width="48" height="32"/>
+        <image name="QuestionIcon" width="48" height="32"/>
+    </resources>
 </document>
