@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  quiz
 //
-//  Created by _________ on _______________.
+//  Created by Matthew Olker on 28 February 2017.
 //  Copyright © 2016 CSC. All rights reserved.
 //
 
