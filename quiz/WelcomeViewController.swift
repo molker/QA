@@ -20,8 +20,5 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        takeQuiz.backgroundColor = UIColor.lightGray
-        takeQuiz.showsTouchWhenHighlighted = true
-        takeQuiz.layer.cornerRadius = 5
     }
 }
